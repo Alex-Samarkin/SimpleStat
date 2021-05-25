@@ -42,5 +42,10 @@ namespace TestWF
         {
             (new MCL_CSVForm2()).ShowDialog();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            (new MCL_TFrameForm()).ShowDialog();
+        }
     }
 }

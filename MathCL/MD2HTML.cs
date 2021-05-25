@@ -45,5 +45,21 @@ namespace MathCL
         public void P(string s) => AddParagraph(s);
         public void HR() => P("---");
 
+        public void P(string[] strings)
+        {
+            foreach (string s in strings)
+            {
+                P(s);
+            }
+        }
+
+        public void P(IEnumerable<string> strEnumerable)
+        {
+            foreach (string s in strEnumerable)
+            {
+                P(s);
+            }
+        }
+
     }
 }

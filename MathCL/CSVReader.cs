@@ -93,7 +93,7 @@ namespace MathCL
         public string NewLine { get; set; } = Environment.NewLine;
         public List<string> Headers { get; set; } = new List<string>();
 
-
+        public string[] Strings { get; set; } = null;
 
         public void ReadCSV()
         {
@@ -101,7 +101,7 @@ namespace MathCL
            string f = File.ReadAllText(FullName);
            Headers.Clear();
            Headers = GetHeaders(f);
-
+           Strings = f.Split(new string[] { NewLine }, StringSplitOptions.None);
         }
 
         public List<string> GetHeaders(string f)
